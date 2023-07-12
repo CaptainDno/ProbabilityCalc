@@ -1,0 +1,67 @@
+.chip {
+    display: inline-block;
+    padding: 0 10px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 30px;
+    border-radius: 15px;
+    background-color: #f1f1f1;
+}
+.closebtn {
+    padding-left: 10px;
+    color: #888;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: #000;
+}
+
+.resultsDiv {
+    display: flex;
+    gap: 50px;
+    background-color: snow;
+    padding: 25px;
+    -webkit-box-shadow: 3px 1px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 3px 1px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 3px 1px 8px 0px rgba(34, 60, 80, 0.2);
+}
+#resultTable {
+    border-left: none;
+    border-right: 4px outset gray;
+    border-top: 2px solid darkslategray;
+    border-bottom: 3px solid darkslategray;
+    border-collapse: collapse;
+}
+#resultTable td, #resultTable th {
+    border-bottom: 2px solid dimgrey;
+    border-left: 2px solid lightgray;
+    border-top: 2px solid lightgray;
+    border-right: none;
+    border-collapse: collapse;
+    height: 12px;
+    padding: 4px 20px;
+    vertical-align: center;
+    text-align: right;
+}
+
+.main-div {
+    -webkit-box-shadow: 3px 1px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 3px 1px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 3px 1px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+#resultTable th {
+    background-color: lightgray;
+}
+
+#resultTable tr:hover {
+    background-color: lightblue;
+}
+#resultTable td:nth-child(1), #resultTable th:nth-child(1){
+    width: 10%;
+    border-left: 9px outset dimgrey;
+}

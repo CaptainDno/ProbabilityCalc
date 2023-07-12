@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="preload" href="/js/main.js">
+</head>
+<body>
+<div class="main-div" style="padding: 10px; margin: 2% 3%; display: flex; flex-direction: column; justify-content: space-between; gap: 25px; font-size: 1.1rem">
+  <div style="border-bottom: 3px solid grey; border-left: 2px solid lightgrey; padding: 10px; width: 95%">
+    <p>This is simple calculator for probability of an event after certain retries. E.g. when we flip coin two times and want to see heads, on second try probability of success will be 0.75 (theoretically with ideal coin)</p>
+    <p><u>How to use:</u> <br> </p>
+    <ol>
+      <li>Enter the <b>target probability</b> value (if <math><mrow><mi>P(A)</mi><mo>≥</mo><msub><mi>P</mi><mn>t</mn></msub></mrow></math> calculation will stop)</li>
+      <li>Enter one or multiple initial P values. For each iteration program uses next available value and if there is no such values left, it will use last available one. (E.g. if you provide values 0.1, 0.4 0.1 will be used for first try and 0.4 for second and all remaining tries)</li>
+      <li>Press button and wait</li>
+    </ol>
+    <p><i>Note:</i> this program was not developed for very hard calculations. It uses one background worker thread and generates table row for each try.</p>
+  </div>
+  <div>
+    <label style="line-height: 30px; text-align: center;">Enter desired probability</label>
+    <input step="0.1" id="desiredP" style="display: inline-block; margin-left: 10px;" type="number" >
+  </div>
+  <div style="display: flex; flex-direction: row; justify-content: left; gap: 10px;">
+    <div style="display: inline-flex; justify-content: space-between; gap: 10px;">
+      <label style="line-height: 30px; text-align: center;">Initial probabilities (press Enter to add):</label>
+      <input step="0.1" type="number" id="initialP" style="display: inline-block;">
+    </div>
+
+    <div id="initalPs" style="display: inline-flex; justify-content: space-between; gap: 10px; margin-left: 20px;">
+
+    </div>
+  </div>
+  <button style="display:block; margin-right: 60%;" onclick="process()">Start</button>
+
+  <div id="resultDiv" class="resultsDiv" style="display: none">
+    <div style="font-size: larger">
+      <p id="processingResult">Processing...</p>
+      <p>Time: <span id="processingTime"></span></p>
+    </div>
+    <table id="resultTable">
+
+    </table>
+  </div>
+</div>
+<script src="/js/main.js"></script>
+</body>
+</html>
