@@ -31,7 +31,7 @@ function process(){
         processingTime.innerHTML = `${(Date.now() - startTime) / 1000} seconds`
     }, 1000);
     const resultTable = document.getElementById('resultTable');
-    resultTable.innerHTML = `<tr><th>Try</th><th><math><mrow>P(A)</mrow></math></th><th><math style="font-weight: bold">P(<mover accent="true"><mrow><mi>A</mi></mrow><mo>_</mo></mover>)</math></th><th><math><mrow><msub><mi>P</mi><mn>t</mn></msub><mo>-</mo><mi>P(A)</mi></mrow></math></th></tr>`
+    resultTable.innerHTML = `<tr><th>Try</th><th><math><mrow><mi>P(A)</mi></mrow></math></th><th><math><mrow><mi>P(</mi><mover accent="true"><mrow><mi>A</mi></mrow><mo>_</mo></mover><mi>)</mi></mrow></math></th><th><math><mrow><msub><mi>P</mi><mn>t</mn></msub><mo>-</mo><mi>P(A)</mi></mrow></math></th></tr>`
     //Show result div
     mainResultDiv.style.display = "block";
 

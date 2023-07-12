@@ -15,8 +15,8 @@
     <p>This is simple calculator for probability of an event after certain retries. E.g. when we flip coin two times and want to see heads, on second try probability of success will be 0.75 (theoretically with ideal coin)</p>
     <p><u>How to use:</u> <br> </p>
     <ol>
-      <li>Enter the <b>target probability</b> value (if <math><mrow><mi>P(A)</mi><mo>≥</mo><msub><mi>P</mi><mn>t</mn></msub></mrow></math> calculation will stop)</li>
-      <li>Enter one or multiple initial P values. For each iteration program uses next available value and if there is no such values left, it will use last available one. (E.g. if you provide values 0.1, 0.4 0.1 will be used for first try and 0.4 for second and all remaining tries)</li>
+      <li>Enter the <b>target probability</b> value (if <math><mrow><mi>P(A)</mi><mo>≥</mo><msub><mi>P</mi><ms>t</ms></msub></mrow></math> calculation will stop)</li>
+      <li>Enter one or multiple initial <math><mrow><mi>P</mi></mrow></math> values. For each iteration program uses next available value and if there is no such values left, it will use last available one. (E.g. if you provide values 0.1, 0.4 0.1 will be used for first try and 0.4 for second and all remaining tries)</li>
       <li>Press button and wait</li>
     </ol>
     <p><i>Note:</i> this program was not developed for very hard calculations. It uses one background worker thread and generates table row for each try.</p>
