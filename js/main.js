@@ -20,7 +20,7 @@ function removeInitialP(element){
     element.parentElement.remove();
 }
 function process(){
-    const worker = new Worker("/js/worker.js");
+    const worker = new Worker("js/worker.js");
     const mainResultDiv = document.getElementById('resultDiv');
     const processingResult = document.getElementById('processingResult');
     processingResult.innerHTML = "Processing";
